@@ -42,6 +42,12 @@ a{color:#b6d0e6}a:hover{color:#eef1f4}
 @media (max-width: 420px){
   .facts-grid{grid-template-columns:1fr !important}
 }
+.disciplines{display:flex;flex-wrap:nowrap;justify-content:center;align-items:baseline;gap:0.45em;white-space:nowrap}
+@media (max-width: 640px){
+  .disciplines{flex-direction:column;align-items:center;gap:4px !important;font-size:18px !important;letter-spacing:0.22em !important;text-transform:uppercase;line-height:1.3 !important}
+  .disciplines>span:not(.sep){padding-left:0.22em}
+  .disciplines .sep{display:none}
+}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 </style>
@@ -90,7 +96,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       </div>
 
       <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: clamp(24px, 3vw, 32px); max-width: 640px">
-        <p style="margin: 0; font-weight: 500; font-size: clamp(20px, 2.6vw, 28px); line-height: 1.25; color: #eef1f4; letter-spacing: 0.01em">Photography · Cinema · Performance</p>
+        <p class="disciplines" style="margin: 0; font-weight: 500; font-size: clamp(20px, 2.6vw, 28px); line-height: 1.25; color: #eef1f4; letter-spacing: 0.01em"><span>Photography</span><span class="sep" aria-hidden="true">·</span><span>Cinema</span><span class="sep" aria-hidden="true">·</span><span>Performance</span></p>
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px">
           <a href="#open-call" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; border-radius: 8px; background: #eef1f4; color: #0b0e13; font-weight: 700; font-size: 17px; text-decoration: none">Enter the open call</a>
         </div>
