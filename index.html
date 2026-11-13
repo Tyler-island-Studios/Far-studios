@@ -78,6 +78,18 @@ html{scroll-behavior:smooth}
   .nav-links{padding:0 24px 0 0 !important;gap:6px !important}
 }
 @media (max-width: 640px){.studio-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+@media (max-width: 640px){
+  .about-panel{margin-left:-24px !important;margin-right:-24px !important;border-radius:0 !important;border-left:0 !important;border-right:0 !important}
+  .about-col{padding:28px 24px !important}
+  .about-wwd{padding:28px 24px 32px !important}
+  .about-wwd > div[style*="grid"] > div{padding:20px !important}
+  .oc-card{padding:22px 20px !important}
+  .mem-card{padding:24px 20px !important}
+  #contact-form{padding:20px !important}
+}
+@media (max-width: 480px){
+  .program-grid{grid-template-columns:1fr !important;gap:24px !important}
+}
 </style>
 <style>
 :root{color-scheme:dark}
@@ -216,7 +228,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         <p style="margin: 0; font-size: 21px; line-height: 1.55; color: #bcc5cf">Open to artists worldwide. Submissions run from November 15 to December 28, 2026. Selected artists will be announced January 5, 2027.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 24px">
-        <article style="background: #0b0e13; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+        <article class="oc-card" style="background: #0b0e13; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
           <h3 style="margin: 0; display: flex; align-items: center; gap: 14px; font-weight: 800; font-size: 28px; line-height: 1.15"><svg style="flex: none" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#b6d0e6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="M7 4v16M17 4v16M3 8h4M3 12h4M3 16h4M17 8h4M17 12h4M17 16h4"></path></svg>Film</h3>
           <p style="margin: 0; max-width: 62ch; font-size: 15px; color: #bcc5cf">Narrative, documentary, animation and experimental. MP4 or MOV (H.264), with English subtitles if needed.</p>
           <details class="rules-drop" style="border: 1px solid #2a3340; border-radius: 10px; background: #131922; overflow: hidden">
@@ -229,7 +241,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
             </div>
           </details>
         </article>
-        <article style="background: #0b0e13; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+        <article class="oc-card" style="background: #0b0e13; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
           <h3 style="margin: 0; display: flex; align-items: center; gap: 14px; font-weight: 800; font-size: 28px; line-height: 1.15"><svg style="flex: none" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#b6d0e6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>Photography</h3>
           <p style="margin: 0; max-width: 62ch; font-size: 15px; color: #bcc5cf">Fine art, documentary, portrait, street, travel and experimental. Enter with JPEG previews and your preferred print size and paper.</p>
           <details class="rules-drop" style="border: 1px solid #2a3340; border-radius: 10px; background: #131922; overflow: hidden">
@@ -241,7 +253,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
             </div>
           </details>
         </article>
-        <article style="grid-column: 1 / -1; background: #0b0e13; border-radius: 12px; padding: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px 40px; align-items: start">
+        <article class="oc-card" style="grid-column: 1 / -1; background: #0b0e13; border-radius: 12px; padding: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px 40px; align-items: start">
           <div style="display: flex; flex-direction: column; gap: 16px">
             <h3 style="margin: 0; display: flex; align-items: center; gap: 14px; font-weight: 800; font-size: 28px; line-height: 1.15"><svg style="flex: none" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#b6d0e6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11" rx="3"></rect><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"></path></svg>Performance</h3>
             <p style="margin: 0; max-width: 62ch; font-size: 15px; color: #bcc5cf">Theatre, dance, puppetry, spoken word, sound, multimedia and experimental work, usually 10–45 minutes.</p>
@@ -266,7 +278,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   <section id="about" style="padding: 96px 24px; scroll-margin-top: 72px">
     <div style="max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
       <h2 style="margin: 0; font-weight: 900; font-size: clamp(40px, 6.5vw, 72px); line-height: 1.02; letter-spacing: -0.03em; color: #eef1f4">FÃR STUDIOS</h2>
-      <div style="border: 1px solid #232b37; border-radius: 16px; overflow: hidden; background: #131922">
+      <div class="about-panel" style="border: 1px solid #232b37; border-radius: 16px; overflow: hidden; background: #131922">
         <div class="studio-grid" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; background: #232b37; border-bottom: 1px solid #232b37">
           <img src="studio-6.jpg" alt="An artist pointing out work to two visitors in the studio" width="1000" height="775" loading="lazy" decoding="async" style="display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center">
           <img src="studio-1.jpg" alt="Studio wall at FÃR STUDIOS with a large drip painting and posters" width="1000" height="775" loading="lazy" decoding="async" style="display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center">
@@ -276,19 +288,19 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
           <img src="studio-5.jpg" alt="Visitors walking past walls of posters and prints" width="1000" height="775" loading="lazy" decoding="async" style="display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center">
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 1px; background: #232b37">
-          <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0; padding: clamp(22px, 4vw, 48px); background: #131922">
+          <div class="about-col" style="display: flex; flex-direction: column; gap: 18px; min-width: 0; padding: clamp(22px, 4vw, 48px); background: #131922">
             <p style="margin: 0; font-weight: 700; font-size: 13px; line-height: 1.2; letter-spacing: 0.14em; text-transform: uppercase; color: #8a99aa">The studio</p>
             <p style="margin: 0; font-weight: 500; font-size: clamp(22px, 2.3vw, 27px); line-height: 1.3; letter-spacing: -0.01em; color: #eef1f4; text-wrap: balance">FÃR is a creative studio, artist residency and gallery space.</p>
             <p style="margin: 0; font-size: 18px; line-height: 1.7; color: #bcc5cf">We bring together global artists working across fine art, film, photography, performance and new media.</p>
           </div>
-          <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0; padding: clamp(22px, 4vw, 48px); background: #131922">
+          <div class="about-col" style="display: flex; flex-direction: column; gap: 18px; min-width: 0; padding: clamp(22px, 4vw, 48px); background: #131922">
             <p style="margin: 0; font-weight: 700; font-size: 13px; line-height: 1.2; letter-spacing: 0.14em; text-transform: uppercase; color: #8a99aa">Our story</p>
             <h3 style="margin: 0; font-weight: 700; font-size: clamp(22px, 2.3vw, 27px); line-height: 1.3; letter-spacing: -0.01em; color: #eef1f4; text-wrap: balance"><span style="white-space: nowrap">Founded on Nantucket.</span> <span style="white-space: nowrap">Found globally.</span> <span style="white-space: nowrap; color: #b6d0e6">Go FÃR.</span></h3>
             <p style="margin: 0; font-size: 18px; line-height: 1.7; color: #bcc5cf">FÃR STUDIOS was founded by <span style="color: #eef1f4; font-weight: 600">Tyler Island</span>, an interdisciplinary artist and filmmaker from Nantucket, often called the <em style="color: #eef1f4">Faraway Island</em>.</p>
             <p style="margin: 0; font-size: 18px; line-height: 1.7; color: #bcc5cf">A former whaling capital and international seaport, the island has long been a hub for artists and creatives. FÃR STUDIOS is inspired by that same spirit of exploration, adventure and discovery through the arts.</p>
           </div>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 20px; padding: clamp(22px, 3.5vw, 40px) clamp(22px, 4vw, 48px) clamp(22px, 4vw, 48px); border-top: 1px solid #232b37">
+        <div class="about-wwd" style="display: flex; flex-direction: column; gap: 20px; padding: clamp(22px, 3.5vw, 40px) clamp(22px, 4vw, 48px) clamp(22px, 4vw, 48px); border-top: 1px solid #232b37">
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px">
             <h3 style="margin: 0; font-weight: 800; font-size: clamp(22px, 2.2vw, 26px); line-height: 1.2; color: #eef1f4">What we do</h3>
           </div>
@@ -380,7 +392,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         <p style="margin: 0; font-weight: 500; font-size: clamp(22px, 2.6vw, 28px); line-height: 1.35; color: #eef1f4">Join our community of creatives.</p>
         <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #bcc5cf">We offer private memberships to our community and creative space to learn, create, build and share.</p>
       </div>
-      <div style="background: #131922; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 24px">
+      <div class="mem-card" style="background: #131922; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 24px">
         <details class="rules-drop" style="margin: 0">
           <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 52px; cursor: pointer; list-style: none; color: #eef1f4"><h3 style="margin: 0; font-weight: 800; font-size: 24px">Member privileges</h3><svg class="rules-chev" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; transition: transform 0.2s"><path d="M6 9l6 6 6-6"></path></svg></summary>
           <ul style="margin: 16px 0 0; padding: 20px 0 4px; border-top: 1px solid #2a3340; list-style: none; display: flex; flex-direction: column; gap: 14px">
