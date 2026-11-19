@@ -90,6 +90,37 @@ html{scroll-behavior:smooth}
 @media (max-width: 480px){
   .program-grid{grid-template-columns:1fr !important;gap:24px !important}
 }
+@media (max-width: 420px){.artist-gallery{gap:12px !important}}
+.pa-in{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.artist-cards > .artist-card{display:none !important}
+#pa1:checked ~ .artist-cards #ac1{display:grid !important}
+#pa1:checked ~ .artist-tiles label[for="pa1"]{border-color:#b6d0e6 !important;box-shadow:0 0 0 1px #b6d0e6}
+#pa1:focus-visible ~ .artist-tiles label[for="pa1"]{outline:2px solid #b6d0e6;outline-offset:3px}
+#pa2:checked ~ .artist-cards #ac2{display:grid !important}
+#pa2:checked ~ .artist-tiles label[for="pa2"]{border-color:#b6d0e6 !important;box-shadow:0 0 0 1px #b6d0e6}
+#pa2:focus-visible ~ .artist-tiles label[for="pa2"]{outline:2px solid #b6d0e6;outline-offset:3px}
+#pa3:checked ~ .artist-cards #ac3{display:grid !important}
+#pa3:checked ~ .artist-tiles label[for="pa3"]{border-color:#b6d0e6 !important;box-shadow:0 0 0 1px #b6d0e6}
+#pa3:focus-visible ~ .artist-tiles label[for="pa3"]{outline:2px solid #b6d0e6;outline-offset:3px}
+#pa4:checked ~ .artist-cards #ac4{display:grid !important}
+#pa4:checked ~ .artist-tiles label[for="pa4"]{border-color:#b6d0e6 !important;box-shadow:0 0 0 1px #b6d0e6}
+#pa4:focus-visible ~ .artist-tiles label[for="pa4"]{outline:2px solid #b6d0e6;outline-offset:3px}
+.pa-tile:hover{border-color:#3a4656 !important}
+.artist-cards > .artist-card{animation:acIn .25s ease}
+@keyframes acIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.artist-cards > .artist-card{position:relative}
+.ac-close:hover{border-color:#b6d0e6 !important}
+#pa0:checked ~ .artist-cards{display:none}
+.ft-label{display:none}
+@media (min-width: 821px){
+  .float-top{display:inline-flex;position:fixed;right:max(28px, env(safe-area-inset-right, 0px));bottom:calc(28px + env(safe-area-inset-bottom, 0px));z-index:30;align-items:center;gap:8px;height:48px;padding:0 18px 0 14px;border-radius:999px;background:rgba(19,25,34,0.88);border:1px solid #2f3a48;color:#eef1f4;font-weight:700;font-size:15px;letter-spacing:0.02em;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,0.45);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .float-top svg{width:18px;height:18px}
+  .ft-label{display:inline}
+  .float-top:hover{background:#eef1f4;color:#0b0e13;border-color:#eef1f4}
+}
+.float-top:focus-visible{outline:2px solid #b6d0e6;outline-offset:3px}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 </style>
 <style>
 :root{color-scheme:dark}
@@ -157,6 +188,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 24px 12px; min-width: 0; background: #0b0e13"><span style="font-size: 16px; color: #bcc5cf; letter-spacing: 0.02em; line-height: 1.3">Entry</span><span style="font-weight: 700; font-size: clamp(18px, 1.7vw, 21px); line-height: 1.2; color: #eef1f4">Free for visitors</span></div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 24px 12px; min-width: 0; background: #0b0e13"><span style="font-size: 16px; color: #bcc5cf; letter-spacing: 0.02em; line-height: 1.3">How</span><a href="#tickets" class="fact-link" style="font-weight: 700; font-size: clamp(18px, 1.7vw, 21px); line-height: 1.2; color: #eef1f4; text-decoration: none">Plan your visit<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: inline-block; vertical-align: -3px; margin-left: 6px"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
       </div>
+      <div role="group" aria-label="In partnership with" style="display: flex; flex-direction: column; align-items: center; gap: 16px; margin-top: 36px">
+        <p style="margin: 0; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: #bcc5cf">In partnership with</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px">
+          <a href="https://www.hcmy.org/" target="_blank" rel="noopener" style="display: block; width: clamp(64px, 7vw, 84px); height: clamp(64px, 7vw, 84px); border-radius: 14px; overflow: hidden; border: 1px solid #2a3340; flex: none"><img src="partner-hechyeomoyeo.jpg" alt="The Hechyeomoyeo" width="512" height="512" style="display: block; width: 100%; height: 100%; object-fit: cover"></a>
+          <a href="https://www.thaifar.com" target="_blank" rel="noopener" style="display: block; width: clamp(64px, 7vw, 84px); height: clamp(64px, 7vw, 84px); border-radius: 14px; overflow: hidden; border: 1px solid #2a3340; flex: none"><img src="partner-far-travel.jpg" alt="FÃR Travel" width="512" height="512" style="display: block; width: 100%; height: 100%; object-fit: cover"></a>
+          <a href="https://www.thaicast.io/" target="_blank" rel="noopener" style="display: block; width: clamp(64px, 7vw, 84px); height: clamp(64px, 7vw, 84px); border-radius: 14px; overflow: hidden; border: 1px solid #2a3340; flex: none"><img src="partner-thaicast.jpg" alt="ThaiCast" width="512" height="512" style="display: block; width: 100%; height: 100%; object-fit: cover"></a>
+        </div>
+      </div>
 
     </div>
   </header>
@@ -177,7 +216,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         <div style="display: flex; flex-direction: column; gap: 8px"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#b6d0e6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-bottom: 8px"><rect x="9" y="2.5" width="6" height="11" rx="3"></rect><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"></path></svg><h3 style="margin: 0; font-weight: 800; font-size: 21px">Live performance</h3><p style="margin: 0; font-size: 15px; color: #bcc5cf">Theatre, dance, puppetry, sound and more.</p></div>
         <div style="display: flex; flex-direction: column; gap: 8px"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#b6d0e6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-bottom: 8px"><path d="M4 5h11a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H9l-4 3v-3H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"></path><path d="M16 9h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-1v3l-4-3h-4a1 1 0 0 1-1-1v-1"></path></svg><h3 style="margin: 0; font-weight: 800; font-size: 21px">Talks</h3><p style="margin: 0; font-size: 15px; color: #bcc5cf">Artist talks and cultural exchange through the run.</p></div>
         <div style="display: flex; flex-direction: column; gap: 8px"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#b6d0e6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-bottom: 8px"><path d="M15 4l5 5L9 20H4v-5z"></path><path d="M13 6l5 5"></path></svg><h3 style="margin: 0; font-weight: 800; font-size: 21px">Workshops</h3><p style="margin: 0; font-size: 15px; color: #bcc5cf">Filmmaking, acting, performance and photography.</p></div>
-        <div style="display: flex; flex-direction: column; gap: 8px"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#b6d0e6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-bottom: 8px"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"></path></svg><h3 style="margin: 0; font-weight: 800; font-size: 21px">Online catalog</h3><p style="margin: 0; font-size: 15px; color: #bcc5cf">Selected artists and their work, on this site.</p></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#b6d0e6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-bottom: 8px"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"></path></svg><h3 style="margin: 0; font-weight: 800; font-size: 21px">Online catalog</h3><p style="margin: 0; font-size: 15px; color: #bcc5cf">Every eligible submission, featured on this site.</p></div>
       </div>
     </div>
   </section>
@@ -208,7 +247,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
           <div style="display: flex; flex-direction: column; font-size: 21px; padding: 0 24px 8px">
             <div class="date-row" style="display: grid; grid-template-columns: 176px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-top: 1px solid #232b37"><span style="color: #bcc5cf">Nov 15, 2026</span><span>Submissions open</span></div>
             <div class="date-row" style="display: grid; grid-template-columns: 176px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-top: 1px solid #232b37; font-weight: 700"><span>Dec 28, 2026</span><span>Submission deadline</span></div>
-            <div class="date-row" style="display: grid; grid-template-columns: 176px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-top: 1px solid #232b37"><span style="color: #bcc5cf">Jan 5, 2027</span><span>Selected artists announced</span></div>
+            <div class="date-row" style="display: grid; grid-template-columns: 176px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-top: 1px solid #232b37"><span style="color: #bcc5cf">Jan 5, 2027</span><span>Gallery selections announced</span></div>
             <div class="date-row" style="display: grid; grid-template-columns: 176px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-top: 1px solid #232b37"><span style="color: #bcc5cf">Jan 14</span><span>Pre-opening film screening</span></div>
             <div class="date-row" style="display: grid; grid-template-columns: 176px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-top: 1px solid #232b37; font-weight: 700"><span>Jan 15</span><span>Opening reception</span></div>
             <div class="date-row" style="display: grid; grid-template-columns: 176px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-top: 1px solid #232b37"><span style="color: #bcc5cf">Jan 23</span><span>Cinema Experience: Filmmakers &amp; Artist Party (ticketed event)</span></div>
@@ -225,7 +264,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       <div style="display: flex; flex-direction: column; gap: 16px; max-width: 820px">
         <span aria-hidden="true" style="display: inline-flex; align-self: flex-start; align-items: center; justify-content: center; width: clamp(104px, 10vw, 144px); height: clamp(104px, 10vw, 144px); border-radius: clamp(24px, 2.4vw, 32px); background: #0b0e13; border: 1px solid #2a3340; margin-bottom: 4px"><svg width="75%" height="75%" viewBox="0 0 48 48" fill="none" stroke="#b6d0e6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 7.5C14 7.5 6.5 14.8 6.5 24S13.5 40.5 22 40.5c2.4 0 3.4-1.5 3.4-3.2 0-2.5-2.1-3.5-2.1-5.4 0-1.8 1.4-3 3.3-3h5.6c6 0 10.3-4 10.3-9.6C42.5 12.3 34.6 7.5 24 7.5z"/><circle cx="15" cy="21" r="2.4"/><circle cx="21" cy="14.3" r="2.4"/><circle cx="29.5" cy="14.5" r="2.4"/><circle cx="14.5" cy="29.5" r="2.4" stroke="#eef1f4" fill="#eef1f4" fill-opacity="0.25"/></svg></span>
         <div style="display: flex; flex-direction: column; gap: 0; margin-bottom: 8px"><h2 style="margin: 0; font-weight: 900; font-size: clamp(40px, 6.5vw, 72px); line-height: 1.02; letter-spacing: -0.03em">Open call for artists</h2><p style="margin: 18px 0 0; font-weight: 700; font-size: clamp(18px, 2vw, 22px); line-height: 1.2; letter-spacing: 0.02em; color: #bcc5cf">FÃR CINEMA 2027</p></div>
-        <p style="margin: 0; font-size: 21px; line-height: 1.55; color: #bcc5cf">Open to artists worldwide. Submissions run from November 15 to December 28, 2026. Selected artists will be announced January 5, 2027.</p>
+        <p style="margin: 0; font-size: 21px; line-height: 1.55; color: #bcc5cf">Open to artists worldwide. Submissions run from November 15 to December 28, 2026. All submitted works that meet the requirements will be featured in the online exhibition catalog. In addition, a selection of artists will have their works exhibited at the FÃR STUDIOS venue in Chiang Mai. Gallery selections will be announced January 5, 2027.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 24px">
         <article class="oc-card" style="background: #0b0e13; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
@@ -383,16 +422,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     </div>
   </section>
 
-  <div class="film-edge" aria-hidden="true"><div class="film-print"><span>FÃR CINEMA 400</span><span>▸ 13</span><span>▸ 13A</span><span>SAFETY FILM</span><span>▸ 14</span><span>▸ 14A</span><span>FÃR CINEMA 400</span><span>▸ 15</span></div></div>
-  <section id="membership" style="padding: 96px 24px; scroll-margin-top: 72px">
+  <div class="film-edge" aria-hidden="true"><div class="film-print"><span>FÃR CINEMA 400</span><span>▸ 15</span><span>▸ 15A</span><span>SAFETY FILM</span><span>▸ 16</span><span>▸ 16A</span><span>FÃR CINEMA 400</span><span>▸ 17</span></div></div>
+  <section id="membership" style="background: #131922; padding: 96px 24px; scroll-margin-top: 72px">
     <div style="max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 40px 64px; align-items: start">
       <div style="display: flex; flex-direction: column; gap: 16px; align-self: center">
-        <span aria-hidden="true" style="display: inline-flex; align-self: flex-start; align-items: center; justify-content: center; width: clamp(104px, 10vw, 144px); height: clamp(104px, 10vw, 144px); border-radius: clamp(24px, 2.4vw, 32px); background: #131922; border: 1px solid #2a3340; margin-bottom: 4px"><svg width="75%" height="75%" viewBox="0 0 48 48" fill="none" stroke="#b6d0e6" stroke-width="1.8" stroke-linecap="round"><circle cx="24" cy="24" r="5.6" stroke="#eef1f4" fill="#eef1f4" fill-opacity="0.12"/><circle cx="24.00" cy="6.80" r="3.3"/><circle cx="38.90" cy="15.40" r="3.3"/><circle cx="38.90" cy="32.60" r="3.3"/><circle cx="24.00" cy="41.20" r="3.3"/><circle cx="9.10" cy="32.60" r="3.3"/><circle cx="9.10" cy="15.40" r="3.3"/><path d="M19.12 13.04A12 12 0 0 1 28.88 13.04"/><path d="M31.05 14.29A12 12 0 0 1 35.93 22.75"/><path d="M35.93 25.25A12 12 0 0 1 31.05 33.71"/><path d="M28.88 34.96A12 12 0 0 1 19.12 34.96"/><path d="M16.95 33.71A12 12 0 0 1 12.07 25.25"/><path d="M12.07 22.75A12 12 0 0 1 16.95 14.29"/></svg></span>
+        <span aria-hidden="true" style="display: inline-flex; align-self: flex-start; align-items: center; justify-content: center; width: clamp(104px, 10vw, 144px); height: clamp(104px, 10vw, 144px); border-radius: clamp(24px, 2.4vw, 32px); background: #0b0e13; border: 1px solid #2a3340; margin-bottom: 4px"><svg width="75%" height="75%" viewBox="0 0 48 48" fill="none" stroke="#b6d0e6" stroke-width="1.8" stroke-linecap="round"><circle cx="24" cy="24" r="5.6" stroke="#eef1f4" fill="#eef1f4" fill-opacity="0.12"/><circle cx="24.00" cy="6.80" r="3.3"/><circle cx="38.90" cy="15.40" r="3.3"/><circle cx="38.90" cy="32.60" r="3.3"/><circle cx="24.00" cy="41.20" r="3.3"/><circle cx="9.10" cy="32.60" r="3.3"/><circle cx="9.10" cy="15.40" r="3.3"/><path d="M19.12 13.04A12 12 0 0 1 28.88 13.04"/><path d="M31.05 14.29A12 12 0 0 1 35.93 22.75"/><path d="M35.93 25.25A12 12 0 0 1 31.05 33.71"/><path d="M28.88 34.96A12 12 0 0 1 19.12 34.96"/><path d="M16.95 33.71A12 12 0 0 1 12.07 25.25"/><path d="M12.07 22.75A12 12 0 0 1 16.95 14.29"/></svg></span>
         <h2 style="margin: 0; font-weight: 900; font-size: clamp(40px, 6.5vw, 72px); line-height: 1.02; letter-spacing: -0.03em">Artist <span style="white-space: nowrap">Co-Working</span> Membership</h2>
         <p style="margin: 0; font-weight: 500; font-size: clamp(22px, 2.6vw, 28px); line-height: 1.35; color: #eef1f4">Join our community of creatives.</p>
         <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #bcc5cf">We offer private memberships to our community and creative space to learn, create, build and share.</p>
       </div>
-      <div class="mem-card" style="background: #131922; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 24px">
+      <div class="mem-card" style="background: #0b0e13; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 24px">
         <details class="rules-drop" style="margin: 0">
           <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 52px; cursor: pointer; list-style: none; color: #eef1f4"><h3 style="margin: 0; font-weight: 800; font-size: 24px">Member privileges</h3><svg class="rules-chev" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; transition: transform 0.2s"><path d="M6 9l6 6 6-6"></path></svg></summary>
           <ul style="margin: 16px 0 0; padding: 20px 0 4px; border-top: 1px solid #2a3340; list-style: none; display: flex; flex-direction: column; gap: 14px">
@@ -404,21 +443,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
             <li style="display: flex; gap: 12px; align-items: flex-start; font-size: 19px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b6d0e6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 4px"><path d="M5 12l5 5L20 7"></path></svg><span>Special discounts from <a target="_blank" rel="noopener" href="https://www.thaifar.com" style="color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px">FÃR Travel</a> on transportation, travel services, cultural tours, hotels, and vacation and travel bookings</span></li>
           </ul>
         </details>
-        <a href="#contact" data-topic="Artist co-working membership" style="align-self: stretch; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.25; box-sizing: border-box; min-height: 52px; padding: 10px 20px; border-radius: 8px; background: #eef1f4; color: #0b0e13; font-weight: 700; font-size: 17px; text-decoration: none">Inquire about membership</a>
+        <a href="#contact" data-topic="Artist co-working membership" style="align-self: stretch; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.25; box-sizing: border-box; min-height: 52px; padding: 10px 20px; border-radius: 8px; background: #eef1f4; color: #131922; font-weight: 700; font-size: 17px; text-decoration: none">Inquire about membership</a>
         <p style="margin: 0; font-size: 15px; color: #bcc5cf">Ask about becoming a member of the FÃR STUDIOS artist co-working space.</p>
       </div>
     </div>
   </section>
 
-  <div class="film-edge" aria-hidden="true"><div class="film-print"><span>FÃR CINEMA 400</span><span>▸ 15</span><span>▸ 15A</span><span>SAFETY FILM</span><span>▸ 16</span><span>▸ 16A</span><span>FÃR CINEMA 400</span><span>▸ 17</span></div></div>
-  <section id="contact" style="background: #131922; padding: 96px 24px; scroll-margin-top: 72px">
+  <div class="film-edge" aria-hidden="true"><div class="film-print"><span>FÃR CINEMA 400</span><span>▸ 17</span><span>▸ 17A</span><span>SAFETY FILM</span><span>▸ 18</span><span>▸ 18A</span><span>FÃR CINEMA 400</span><span>▸ 19</span></div></div>
+  <section id="contact" style="padding: 96px 24px; scroll-margin-top: 72px">
     <div style="max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 48px; align-items: start">
       <div style="display: flex; flex-direction: column; gap: 16px">
-        <span aria-hidden="true" style="display: inline-flex; align-self: flex-start; align-items: center; justify-content: center; width: clamp(104px, 10vw, 144px); height: clamp(104px, 10vw, 144px); border-radius: clamp(24px, 2.4vw, 32px); background: #0b0e13; border: 1px solid #2a3340; margin-bottom: 4px"><svg width="75%" height="75%" viewBox="0 0 48 48" fill="none" stroke="#b6d0e6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="11" width="36" height="26" rx="4"/><path d="M7.5 13.5L24 26l16.5-12.5"/><path d="M30 31.5h6" stroke="#eef1f4"/></svg></span>
+        <span aria-hidden="true" style="display: inline-flex; align-self: flex-start; align-items: center; justify-content: center; width: clamp(104px, 10vw, 144px); height: clamp(104px, 10vw, 144px); border-radius: clamp(24px, 2.4vw, 32px); background: #131922; border: 1px solid #2a3340; margin-bottom: 4px"><svg width="75%" height="75%" viewBox="0 0 48 48" fill="none" stroke="#b6d0e6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="11" width="36" height="26" rx="4"/><path d="M7.5 13.5L24 26l16.5-12.5"/><path d="M30 31.5h6" stroke="#eef1f4"/></svg></span>
         <h2 style="margin: 0; font-weight: 900; font-size: clamp(40px, 6.5vw, 72px); line-height: 1.02; letter-spacing: -0.03em">Contact us</h2>
         <p style="margin: 0; font-size: 21px; color: #bcc5cf">Questions about the exhibition, residency or membership? Get in touch.</p>
-        <div style="background: #0b0e13; border-radius: 12px; padding: 24px"><span style="display: block; font-size: 15px; color: #bcc5cf">Email</span><span style="font-weight: 500; font-size: 21px">farstudiosfar@gmail.com</span></div>
-        <div style="background: #0b0e13; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
+        <div style="background: #131922; border-radius: 12px; padding: 24px"><span style="display: block; font-size: 15px; color: #bcc5cf">Email</span><span style="font-weight: 500; font-size: 21px">farstudiosfar@gmail.com</span></div>
+        <div style="background: #131922; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
           <span style="font-size: 15px; color: #bcc5cf">Follow FÃR STUDIOS: @far.studios.io</span>
           <div style="display: flex; flex-wrap: wrap; gap: 12px">
             <a target="_blank" rel="noopener" href="https://www.instagram.com/far.studios.io/" aria-label="FÃR STUDIOS on Instagram" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 18px; border-radius: 8px; border: 1px solid #232b37; color: #eef1f4; text-decoration: none; font-weight: 500"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg>Instagram</a>
@@ -427,7 +466,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         </div>
       </div>
       <div style="display: flex; flex-direction: column; gap: 16px">
-        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" style="background: #0b0e13; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" style="background: #131922; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
           <span style="font-weight: 800; font-size: 21px">Send us a message</span>
           <input type="hidden" name="access_key" value="4ff692c3-bcd1-4fff-aa1c-111a522916d3">
           <input type="hidden" name="subject" value="New message from the FÃR STUDIOS website">
@@ -435,15 +474,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
           <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
           <div style="display: flex; flex-direction: column; gap: 6px">
             <label for="cf-name" style="font-size: 15px; color: #bcc5cf">Name</label>
-            <input id="cf-name" name="name" type="text" autocomplete="name" required="required" style="min-height: 48px; padding: 0 14px; border-radius: 8px; border: 1px solid #2f3947; background: #131922; color: #eef1f4; font: inherit; font-size: 17px">
+            <input id="cf-name" name="name" type="text" autocomplete="name" required="required" style="min-height: 48px; padding: 0 14px; border-radius: 8px; border: 1px solid #2f3947; background: #0b0e13; color: #eef1f4; font: inherit; font-size: 17px">
           </div>
           <div style="display: flex; flex-direction: column; gap: 6px">
             <label for="cf-email" style="font-size: 15px; color: #bcc5cf">Email</label>
-            <input id="cf-email" name="email" type="email" autocomplete="email" required="required" style="min-height: 48px; padding: 0 14px; border-radius: 8px; border: 1px solid #2f3947; background: #131922; color: #eef1f4; font: inherit; font-size: 17px">
+            <input id="cf-email" name="email" type="email" autocomplete="email" required="required" style="min-height: 48px; padding: 0 14px; border-radius: 8px; border: 1px solid #2f3947; background: #0b0e13; color: #eef1f4; font: inherit; font-size: 17px">
           </div>
           <div style="display: flex; flex-direction: column; gap: 6px">
             <label for="cf-topic" style="font-size: 15px; color: #bcc5cf">What is it about?</label>
-            <select id="cf-topic" name="topic" style="min-height: 48px; padding: 0 14px; border-radius: 8px; border: 1px solid #2f3947; background: #131922; color: #eef1f4; font: inherit; font-size: 17px">
+            <select id="cf-topic" name="topic" style="min-height: 48px; padding: 0 14px; border-radius: 8px; border: 1px solid #2f3947; background: #0b0e13; color: #eef1f4; font: inherit; font-size: 17px">
               <option value="" selected>Choose a topic</option>
               <option>Entering the open call</option>
               <option>Visiting the exhibition</option>
@@ -456,20 +495,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
           </div>
           <div style="display: flex; flex-direction: column; gap: 6px">
             <label for="cf-message" style="font-size: 15px; color: #bcc5cf">Message</label>
-            <textarea id="cf-message" name="message" rows="5" required="required" style="padding: 12px 14px; border-radius: 8px; border: 1px solid #2f3947; background: #131922; color: #eef1f4; font: inherit; font-size: 17px; resize: vertical"></textarea>
+            <textarea id="cf-message" name="message" rows="5" required="required" style="padding: 12px 14px; border-radius: 8px; border: 1px solid #2f3947; background: #0b0e13; color: #eef1f4; font: inherit; font-size: 17px; resize: vertical"></textarea>
           </div>
-          <button type="submit" style="align-self: flex-start; min-height: 48px; padding: 0 24px; border-radius: 8px; border: 0; background: #eef1f4; color: #131922; font: inherit; font-weight: 500; cursor: pointer">Send message</button>
+          <button type="submit" style="align-self: flex-start; min-height: 48px; padding: 0 24px; border-radius: 8px; border: 0; background: #eef1f4; color: #0b0e13; font: inherit; font-weight: 500; cursor: pointer">Send message</button>
           <p role="status" style="margin: 0; color: #b6d0e6" hidden>Message sent. We’ll reply by email.</p>
         </form>
       </div>
     </div>
   </section>
 
-  <div class="film-edge" aria-hidden="true"><div class="film-print"><span>FÃR CINEMA 400</span><span>▸ 17</span><span>▸ 17A</span><span>SAFETY FILM</span><span>▸ 18</span><span>▸ 18A</span><span>FÃR CINEMA 400</span><span>▸ 19</span></div></div>
-  <section id="visit" style="padding: 96px 24px; scroll-margin-top: 72px">
+  <div class="film-edge" aria-hidden="true"><div class="film-print"><span>FÃR CINEMA 400</span><span>▸ 19</span><span>▸ 19A</span><span>SAFETY FILM</span><span>▸ 20</span><span>▸ 20A</span><span>FÃR CINEMA 400</span><span>▸ 21</span></div></div>
+  <section id="visit" style="background: #131922; padding: 96px 24px; scroll-margin-top: 72px">
     <div style="max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
       <div style="display: flex; flex-direction: column">
-        <span aria-hidden="true" style="display: inline-flex; align-self: flex-start; align-items: center; justify-content: center; width: clamp(104px, 10vw, 144px); height: clamp(104px, 10vw, 144px); border-radius: clamp(24px, 2.4vw, 32px); background: #131922; border: 1px solid #2a3340; margin-bottom: 20px"><svg width="75%" height="75%" viewBox="0 0 48 48" fill="none" stroke="#b6d0e6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-12.5-11.2-12.5-21.5a12.5 12.5 0 0 1 25 0C36.5 30.8 24 42 24 42z"/><circle cx="24" cy="20.5" r="4.6" stroke="#eef1f4" fill="#eef1f4" fill-opacity="0.15"/></svg></span>
+        <span aria-hidden="true" style="display: inline-flex; align-self: flex-start; align-items: center; justify-content: center; width: clamp(104px, 10vw, 144px); height: clamp(104px, 10vw, 144px); border-radius: clamp(24px, 2.4vw, 32px); background: #0b0e13; border: 1px solid #2a3340; margin-bottom: 20px"><svg width="75%" height="75%" viewBox="0 0 48 48" fill="none" stroke="#b6d0e6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-12.5-11.2-12.5-21.5a12.5 12.5 0 0 1 25 0C36.5 30.8 24 42 24 42z"/><circle cx="24" cy="20.5" r="4.6" stroke="#eef1f4" fill="#eef1f4" fill-opacity="0.15"/></svg></span>
         <h2 style="margin: 0; font-weight: 900; font-size: clamp(40px, 6.5vw, 72px); line-height: 1.02; letter-spacing: -0.03em">Visit Us</h2>
         <p style="margin: 10px 0 0; font-weight: 700; font-size: clamp(18px, 2vw, 22px); line-height: 1.2; letter-spacing: 0.02em; color: #bcc5cf">FÃR STUDIOS, Chiang Mai, Thailand</p>
       </div>
@@ -480,7 +519,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
             <p style="margin: 0; font-weight: 700; font-size: clamp(22px, 2.4vw, 28px); line-height: 1.3; color: #eef1f4">FÃR STUDIOS &amp; <a target="_blank" rel="noopener" href="https://www.thaifar.com" style="color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px">FÃR Travel</a></p>
             <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #bcc5cf">7 Kow Klang Soi 3, Wat Ket<br>Mueang Chiang Mai, Chiang Mai 50000<br>Thailand</p>
           </div>
-          <a target="_blank" rel="noopener" href="https://www.google.com/maps/place/F%C3%A3r+Studios+%26+F%C3%A3r+Travel/@18.7596172,99.0033402,17z/data=!3m1!4b1!4m6!3m5!1s0x30da31002cc24901:0xb61bd34ce57eb232!8m2!3d18.7596172!4d99.0033402!16s%2Fg%2F11yvhbmh1d" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 28px; border-radius: 8px; background: #eef1f4; color: #131922; font-weight: 700; font-size: 17px; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Get directions</a>
+          <a target="_blank" rel="noopener" href="https://www.google.com/maps/place/F%C3%A3r+Studios+%26+F%C3%A3r+Travel/@18.7596172,99.0033402,17z/data=!3m1!4b1!4m6!3m5!1s0x30da31002cc24901:0xb61bd34ce57eb232!8m2!3d18.7596172!4d99.0033402!16s%2Fg%2F11yvhbmh1d" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 28px; border-radius: 8px; background: #eef1f4; color: #0b0e13; font-weight: 700; font-size: 17px; text-decoration: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Get directions</a>
         </div>
         <div id="map-window" style="position: relative; min-height: 320px; border-radius: 12px; overflow: hidden; border: 1px solid #232b37"><iframe title="Map of FÃR STUDIOS, Chiang Mai" src="https://www.google.com/maps?q=F%C3%A3r+Studios+%26+F%C3%A3r+Travel,+7+Kow+Klang+Soi+3,+Chiang+Mai&amp;ll=18.7596172,99.0033402&amp;z=16&amp;output=embed" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(1) invert(0.92) contrast(0.9)" tabindex="-1" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
       </div>
@@ -490,9 +529,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
   </main>
 
-  <a href="#top" class="float-top" aria-label="Back to top"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"></path></svg></a>
+  <a href="#top" class="float-top" aria-label="Back to top"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"></path></svg><span class="ft-label">Top</span></a>
 
-  <div class="film-edge" aria-hidden="true"><div class="film-print"><span>FÃR CINEMA 400</span><span>▸ 19</span><span>▸ 19A</span><span>SAFETY FILM</span><span>▸ 20</span><span>▸ 20A</span><span>FÃR CINEMA 400</span><span>▸ 21</span></div></div>
+  <div class="film-edge" aria-hidden="true"><div class="film-print"><span>FÃR CINEMA 400</span><span>▸ 21</span><span>▸ 21A</span><span>SAFETY FILM</span><span>▸ 22</span><span>▸ 22A</span><span>FÃR CINEMA 400</span><span>▸ 23</span></div></div>
   <footer style="padding: 32px 24px 48px; color: #bcc5cf; font-size: 15px">
     <div style="max-width: 1080px; margin: 0 auto 32px; padding-bottom: 32px; border-bottom: 1px solid #232b37; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px">
       <nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 12px 28px">
@@ -510,7 +549,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     </div>
     <div style="max-width: 1080px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 32px">
       <span>FÃR CINEMA 2027, January 14–30, FÃR STUDIOS, Chiang Mai</span>
-      <span>Presented by <a target="_blank" rel="noopener" href="https://www.thaifar.com" style="color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px">FÃR Travel</a> &amp; <a target="_blank" rel="noopener" href="https://www.thaicast.io" style="color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px">ThaiCast</a></span>
+      <span>In partnership with <a target="_blank" rel="noopener" href="https://www.hcmy.org/" style="color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px">The Hechyeomoyeo</a>, <a target="_blank" rel="noopener" href="https://www.thaifar.com" style="color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px">FÃR Travel</a> &amp; <a target="_blank" rel="noopener" href="https://www.thaicast.io/" style="color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px">ThaiCast</a></span>
       <div style="display: flex; gap: 8px">
         <a target="_blank" rel="noopener" href="https://www.instagram.com/far.studios.io/" aria-label="FÃR STUDIOS on Instagram" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 8px; color: #bcc5cf"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg></a>
         <a target="_blank" rel="noopener" href="https://www.facebook.com/share/1CUagw72Xu/" aria-label="FÃR STUDIOS on Facebook" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 8px; color: #bcc5cf"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V10H6.5v3.5H9V21h3.5v-7.5H15l.5-3.5h-3V7a1 1 0 0 1 1-1H15z"></path></svg></a>
